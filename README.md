@@ -14,7 +14,15 @@ $ npm install
 ```shell
 $ npm start
 ```
-React 16
 ```shell
 $ Runing on http://localhost:3000
+```
+
+## Technologies
+
+```shell
+"react": "^16.13.1"
+```
+```shell
+"bootstrap": "^4.5.2"
 ```
