@@ -1,6 +1,6 @@
 # NumberGuesser - front
 
-This is an interface of the [backend](https://github.com/gabriel-coutinho/NumberGuesser)
+This is an interface of this [backend](https://github.com/gabriel-coutinho/NumberGuesser)
 
 ---
 
