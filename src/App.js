@@ -22,7 +22,6 @@ import util from './utils/util'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
-//const randomNumberBetween = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const randomNumberBetween = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);  
 const validateNumber = (value) => {
   let validated = true
@@ -187,7 +186,8 @@ export default class App extends Component {
 
   onLess() {
     const min = this.state.min_number
-    const max = this.state.guess
+    let max = this.state.guess
+    if(max - min > 1) max -= 1;
 
     const randomNumber = randomNumberBetween(min, max)
 
@@ -199,8 +199,9 @@ export default class App extends Component {
   }
 
   onBig() {
-    const min = this.state.guess
+    let min = this.state.guess
     const max = this.state.max_number
+    if(max - min > 1) min += 1;
     const randomNumber = randomNumberBetween(min, max)
 
     this.setState({
