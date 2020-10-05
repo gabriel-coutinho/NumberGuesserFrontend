@@ -11,5 +11,5 @@ export const DISPLAY_PLAYING_NAME = "Computer's guess"
 export const DISPLAY_RANKING_NAME = "Ranking"
 export const DISPLAY_CURRENT_MATCH = "Current match"
 export const DISPLAY_PLAYER_MATCH = "Your matches"
-export const MAX_RANDOM_NUMBER = 1001
-export const MIN_RANDOM_NUMBER = 0
+export const MAX_RANDOM_NUMBER = 1000
+export const MIN_RANDOM_NUMBER = 1

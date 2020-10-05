@@ -57,7 +57,7 @@ export default class App extends Component {
       matches: [],
       matchesPlayer: [],
       name: '',
-      top: 5,
+      top: '',
       yourMatches: 5,
       matchNum: 0
     }
@@ -111,19 +111,15 @@ export default class App extends Component {
 
   async getYourMatches() {
     try {
-      const { yourMatches, name } = this.state
+      const { name } = this.state
 
-      const validated = validateNumber(yourMatches)
-  
-      if (validated) {
-        const url = `/finish?player=${name}&linesPerPage=${yourMatches}`
-        
-        const res = await Api.get(url)
-        
-        this.setState({
-          matchesPlayer: res.data.content
-        })
-      }
+      const url = `/finish?player=${name}`
+      
+      const res = await Api.get(url)
+      
+      this.setState({
+        matchesPlayer: res.data.content
+      })
     } catch (error) {
       alert(error)
     }
@@ -256,7 +252,7 @@ export default class App extends Component {
         guess: RULES,
         matchesPlayer: [],
         name: '',
-        top: 5,
+        top: '',
         yourMatches: 5,
         matchNum: 0
       })
@@ -337,7 +333,7 @@ export default class App extends Component {
             <div className="container container-buttons">
               <input 
                 type="text" className="form-control input top" aria-label="Small" 
-                aria-describedby="inputGroup-sizing-sm" placeholder={`Type a number here`} 
+                aria-describedby="inputGroup-sizing-sm" placeholder={`Rank size`} 
                 value={this.state.top} onChange={this.setTop}>
               </input>
               <button 
