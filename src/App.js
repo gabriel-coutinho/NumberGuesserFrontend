@@ -194,7 +194,7 @@ export default class App extends Component {
     this.setState({
       guess: randomNumber,
       max_number: max,
-      steps: this.state.steps + 1
+      steps: (max === min ) ? this.state.steps : this.state.steps + 1
     })
   }
 
@@ -207,7 +207,7 @@ export default class App extends Component {
     this.setState({
       guess: randomNumber,
       min_number: min,
-      steps: this.state.steps + 1
+      steps: (max === min ) ? this.state.steps : this.state.steps + 1
     })
   }
 
